@@ -32,8 +32,9 @@ tree (blends at the top, textures under `deps\textures\`). Open the extracted `.
 Archive 01 works on its own (meshes, hierarchy and material names are all there); anything whose textures you have not
 downloaded just shows as flat colour. The same MD5 list is in `CHECKSUMS.md5` on the archive page.
 
-This repository holds the documentation, the license, the texture-downscale script and the one file small enough to live here:
-`Bannerlord-Physics-Materials.blend` (160 KB, no textures; see "Physics materials" below). Everything else is in the archive.
+This repository holds the documentation, the license, the texture-downscale script, the one blend small enough to live here
+(`Bannerlord-Physics-Materials.blend`, 160 KB, no textures; see "Physics materials" below) and the polycount reference
+(see "Polycount reference" below). Everything else is in the archive.
 
 Everything here is derived from TaleWorlds' game assets (Native and the Naval DLC). See LICENSE.md for what that means.
 
@@ -46,6 +47,7 @@ Everything here is derived from TaleWorlds' game assets (Native and the Naval DL
 | `Bannerlord-Scene-empire_village_a.blend` | The Native village scene `empire_village_a` rebuilt entity by entity, with its terrain heightmap and paint layers. |
 | `Bannerlord-Mesh-Library.blend` | Every mesh the files above use, one prototype object each, sorted into `Lib_<Culture>` collections. The other files append from it. |
 | `Bannerlord-Physics-Materials.blend` | The 41 physics materials from the game's `physics_materials.xml` (`stone`, `wood`, `wood_nonstick`, `adobe`, `metal`, ...) as Blender asset materials, colour-coded with the engine's own display colours, with friction / arrows-stick / flammable notes in the description. No textures. See "Physics materials" below. |
+| `Bannerlord-Physics-Shape-Polycounts.md` (+ two `.tsv`) | Triangle counts of every Native and Naval DLC physics shape, paired with the LOD0 render mesh it belongs to. In this repository only, not in the archives yet. See "Polycount reference". |
 | `blender_assets.cats.txt` | Asset catalog file for the line above. Only needed if you register this folder as an asset library. |
 | `deps\textures\...` | Only the textures the blends reference, at native resolution, in the same folder layout as the material library they came from. |
 | `tools\` | `Relocate-BannerlordReference.ps1` (+ `bl_relocate.py`, `texconv.exe`): makes a copy of this folder with every texture downscaled to a size you choose. See "Optional: lighter textures". |
@@ -114,6 +116,20 @@ know silently falls back to `default`. So the trick is just to spell the names r
 The materials are plain flat colours, only their names matter. Weapon / shield / missile entries (`metal_weapon`, `wood_shield`,
 `missile`, ...) are for items, not scene props.
 
+## Polycount reference
+
+How heavy are Native's own meshes and collision shapes? [`Bannerlord-Physics-Shape-Polycounts.md`](Bannerlord-Physics-Shape-Polycounts.md)
+has the summary tables and rules of thumb; the two TSVs have one row per mesh, for sorting and filtering in a spreadsheet:
+
+* [`Bannerlord-LOD0-vs-Physics-Polycounts.tsv`](Bannerlord-LOD0-vs-Physics-Polycounts.tsv): 6,302 render meshes that have a
+  `bo_` shape of the same name, with LOD0 triangles, LOD count, lowest-LOD triangles, physics triangles, capsule/sphere
+  primitives, physics as a percentage of LOD0, and LOD0 size in meters.
+* [`Bannerlord-Physics-Shape-Polycounts.tsv`](Bannerlord-Physics-Shape-Polycounts.tsv): all 7,871 physics shapes with
+  manifold, vertex and face counts and their physics materials.
+
+In short: collision is a median 5.6% of LOD0 (buildings 2-8%, rocks and cliffs about 25%), trees mostly use capsules, and the big
+keep/house interiors ship as a single LOD of 30k-214k triangles. Read with TpacTool from game 1.4.8.
+
 ## How to import your first asset
 
 The short version of getting something you built in Blender into the Modding Kit editor, with materials, LODs and
@@ -132,7 +148,8 @@ collision set up automatically on import instead of by hand afterwards. It assum
   detail as you get to the higher LOD) is a progressively higher decimate value with a modifier. Manual cleanup will typically
   still be required for the best results. 
 * **Collision.** Add a simple mesh named `bo_<mesh>` (`bo_my_wall`). That prefix makes it the physics shape instead of a
-  visible mesh. Keep it low-poly and closed. The **material names on the collision faces** set the physics materials
+  visible mesh. Keep it low-poly and closed (Native collision is typically about 5% of LOD0's triangle count, see
+  "Polycount reference"). The **material names on the collision faces** set the physics materials
   (`stone`, `wood`, `adobe`, ...); use `Bannerlord-Physics-Materials.blend` for the valid names, see "Physics materials" above.
 * **Transform.** Work in metres with the origin where you want the pivot, apply rotation and scale, and keep Z up.
 
