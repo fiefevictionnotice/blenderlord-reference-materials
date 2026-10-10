@@ -180,6 +180,10 @@ load prefabs from Native and from your module, so prefabs saved into SandBoxCore
 If something imports 100 times too big or lying on its side, the FBX scale or axis settings are the culprit, not the editor;
 re-export with the scale and forward/up axes adjusted and import again over the top.
 
+## Community resources
+
+The main written reference for Bannerlord 3D modding is the community wiki [docs.bannerlordmodding.lt](https://docs.bannerlordmodding.lt/) (maintained by Litauen). [community-pins/](community-pins/README.md) indexes the pinned guides and tools from the #bl-3d-art Discord channel, credits each author, and links to the matching wiki pages.
+
 ## Known gaps
 
 * A handful of engine materials have no exportable textures and show as flat colour: editor helpers, one water shader, `vineyard_a_animated`.
