@@ -184,6 +184,11 @@ re-export with the scale and forward/up axes adjusted and import again over the 
 
 The main written reference for Bannerlord 3D modding is the community wiki [docs.bannerlordmodding.lt](https://docs.bannerlordmodding.lt/) (maintained by Litauen). [community-pins/](community-pins/README.md) indexes the pinned guides and tools from the #bl-3d-art Discord channel, credits each author, and links to the matching wiki pages. It also mirrors the human skeleton FBX and the male/female body reference meshes.
 
+## Related projects
+
+- **[Bannerlord Scene Toolkit](https://github.com/fiefevictionnotice/BannerlordSceneToolkit):** in-editor tools for the Bannerlord scene editor (material and prefab swapping, prefab creation, scene analysis, backups).
+- **[Scene Toolkit guides](https://github.com/fiefevictionnotice/BannerlordSceneToolkit/tree/main/guides):** 16 guides compiled from six years of the #bl-3d-art and #bl-scenes Discord channels. They cover materials, meshes and LODs, rigged armour, weapons, cloth and physics, terrain and flora, navmesh, sieges, lighting, multiplayer scenes and the campaign map. Every finding credits its author and links to the original message.
+
 ## Known gaps
 
 * A handful of engine materials have no exportable textures and show as flat colour: editor helpers, one water shader, `vineyard_a_animated`.

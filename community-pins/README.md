@@ -47,3 +47,5 @@ Notes:
 - For rigging, use the FBX. Follow the wiki Armature/Skeleton page: rename the armature to `human_skeleton_notused`, hide the body, and parent your mesh to the skeleton.
 - The OBJs are static scale and shape references with no skeleton. Their `.mtl` files were never shared, so they import without materials. Compare their orientation and scale with the FBX before you model around them. Avelium noted that one body OBJ came out rotated 180° compared with TpacTool exports.
 - You can export the native meshes yourself with [TpacTool](https://docs.bannerlordmodding.lt/resources/tpactool/).
+
+For full guides on 3D art and scenes compiled from the whole #bl-3d-art and #bl-scenes history, see the [Scene Toolkit guides](https://github.com/fiefevictionnotice/BannerlordSceneToolkit/tree/main/guides).
