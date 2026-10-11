@@ -3,6 +3,9 @@
 Blender 4.4 reference files rebuilt from Mount & Blade II: Bannerlord's own scene and prefab data, for modders who want to
 modify, measure or block out Bannerlord-style architecture and scenes in Blender.
 
+- **Guides:** 16 community guides on 3D art and scene building, compiled from six years of the Mount & Blade Modding Discord with every finding credited. They live in the [Bannerlord Scene Toolkit repo](https://github.com/fiefevictionnotice/BannerlordSceneToolkit/tree/main/guides).
+- **Skeleton and bodies:** the human skeleton (with male body) FBX and the male/female body reference meshes are in [community-pins/reference-meshes/](community-pins/reference-meshes/).
+
 ![Native village empire_village_a rebuilt in Blender](images/village_scene.png)
 
 ![The material library asset browser](images/material_library.png)
