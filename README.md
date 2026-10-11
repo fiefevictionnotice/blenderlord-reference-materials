@@ -10,13 +10,15 @@ modify, measure or block out Bannerlord-style architecture and scenes in Blender
 
 ![The material library asset browser](images/material_library.png)
 
+![The Armor Reference: rigged multiplayer armor on male and female bodies, with and without gloves](images/armor_reference.png)
+
 ## Download
 
 The files are large (about 15.6 GB with full-resolution textures), so they are hosted on the Internet Archive, not in this repository:
 
 **https://archive.org/details/bannerlord-reference-blender**
 
-The package is nine separate 7-Zip archives. Download the ones you want into one folder and extract each one **into that same
+The package is nine separate 7-Zip archives, plus an optional tenth with the Armor Reference. Download the ones you want into one folder and extract each one **into that same
 folder** with [7-Zip](https://www.7-zip.org/) (free); their contents interleave into a single `Bannerlord-Reference-Distribution`
 tree (blends at the top, textures under `deps\textures\`). Open the extracted `.blend` files in Blender 4.4.
 
@@ -31,6 +33,7 @@ tree (blends at the top, textures under `deps\textures\`). Open the extracted `.
 | `Bannerlord-Reference-07-Textures-Nature.7z` | 2.2 GB | terrain, rock, cliff and plant textures | `4671cc178ca8f49ff83e2451914a42b1` |
 | `Bannerlord-Reference-08-Textures-Equipment.7z` | 1.4 GB | equipment textures referenced by props | `0567daa0e19e88b3492e376290870a07` |
 | `Bannerlord-Reference-09-Textures-Shared-Props.7z` | 1.8 GB | shared and prop textures | `22e459c0665df990f419b243d5046403` |
+| `Bannerlord-Reference-10-Armor-Reference.7z` | 1.1 GB | **optional extra, self-contained:** the Armor Reference blend and its own textures. See "Armor reference" below. | `b3bf421fbe592acec8a767b530f32066` |
 
 Archive 01 works on its own (meshes, hierarchy and material names are all there); anything whose textures you have not
 downloaded just shows as flat colour. The same MD5 list is in `CHECKSUMS.md5` on the archive page.
@@ -100,6 +103,38 @@ If Windows refuses to run the script ("running scripts is disabled on this syste
 * Materials use the engine material names, so an FBX export links back to the game's materials in the Modding Kit editor.
 * Material Preview on a whole culture at once loads a lot of 4k/8k textures. Enable one category at a time, or set
   Preferences > Viewport > Textures > Limit Size to 2048.
+
+## Armor reference
+
+The screenshot above is `Bannerlord-Armor-Reference.blend`, a ready-made reference for armor and equipment work, built
+from Native's multiplayer items. It is not in this repository: download **`Bannerlord-Reference-10-Armor-Reference.7z`**
+(1.1 GB) from the [Internet Archive page](https://archive.org/details/bannerlord-reference-blender) and extract it with
+7-Zip. Open the blend in Blender 4.4 or newer.
+
+What's in it (one collection, `Armor_Reference`):
+
+* `human_skeleton` on its own, and base male and female bodies (body, head, hands).
+* Three multiplayer armor sets (Empire, Vlandia, Sturgia), each worn by four rigged figures: male, male with gloves,
+  female, female with gloves (helmet, body armor, cape, gloves or bare hands, boots).
+* Every equipment slot as loose parts, including all four body-armor variants the game switches between:
+  `<mesh>` (male), `<mesh>_slim` (male with gloves, narrower sleeves), `<mesh>_converted` (female fit) and
+  `<mesh>_converted_slim` (female with gloves).
+* 26 multiplayer weapons (swords, one- and two-handed axes, throwing axes, javelins, jereeds, maces, a dagger, polearms,
+  pikes), assembled from their crafting pieces with the game's own placement rule. Also shields, bows, crossbows, ammo
+  and two horses with harness.
+
+**How it relates to the material files.** Archive 10 is self-contained. It carries the 133 textures it uses, so you do
+not need archives 01-09 for it. Those textures sit in the same `deps\textures\` layout as the rest of the package, and the
+materials use the same engine names and node setup as the material files there. So you can also extract it **into the same
+folder** as archives 01-09. 21 textures are shared with those archives and are byte-identical, so if 7-Zip asks
+about overwriting, either answer is fine. Because the material names match the engine, a mesh built with them links back
+to the game's own materials on import in the Modding Kit.
+
+Characters face +Y, the engine's forward direction: use the back view (Ctrl+Numpad1) to see their faces and read the
+labels. Before exporting armor rigged to these skeletons, read the
+[rigged armor guide](https://github.com/fiefevictionnotice/BannerlordSceneToolkit/blob/main/guides/03-rigged-armour-helmets-gloves.md)
+(skeleton named `human_skeleton_notused`, Skinning ticked, no leaf bones, at most 4 weights per vertex).
+`README-Armor-Reference.md` on the archive page and inside the archive has the details.
 
 ## Physics materials
 
