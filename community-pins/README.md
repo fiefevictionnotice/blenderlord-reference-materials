@@ -32,12 +32,18 @@ Nothing below is my work. If you are one of the authors and want an entry change
 | Google Drive resource folder | cyber [TOR], 2024-11-09 | [Drive folder](https://drive.google.com/drive/folders/1mi2y_sO-ctpqScMlT5zvU1r01L2810_V) | — |
 | Blenderlord reference materials (this repo) | fiefevictionnotice | [GitHub](https://github.com/fiefevictionnotice/blenderlord-reference-materials), [archive.org](https://archive.org/details/bannerlord-reference-blender) | — |
 
-## Body reference meshes
+## Skeleton and body reference meshes
 
-| Pin | Shared by | Link | Status (2026-10-10) |
+Mirrored in [reference-meshes/](reference-meshes/) so they survive the original links going dead. The meshes are TaleWorlds game content (see [THIRD-PARTY-NOTICES.md](../THIRD-PARTY-NOTICES.md)). The credit goes to the people who extracted and shared them.
+
+| File | Shared by | Original link | MD5 |
 |---|---|---|---|
-| Default male body, OBJ | Earendil, 2020-04-07 | [Drive](https://drive.google.com/open?id=1B_-SrRyW4F6vY39mijgK4vx9-AgY6jCA) | online |
-| Female body, OBJ | TH3WICK3D1, 2020-04-09 | [Drive](https://drive.google.com/open?id=13oq_ni-a2eXTBlLF-8I7tI7s8tyfPvfk) | online |
-| Default male body, OBJ (Avelium) | quoted by Earendil, 2020-04-07 | [Drive](https://drive.google.com/open?id=1qWDJRntfn8gsQlCuCaN2-hJwi6doZkD7) | **dead link (404)** |
+| [human_skeleton_with_male_body.fbx](reference-meshes/human_skeleton_with_male_body.fbx): human skeleton + male body, FBX 7.4 | docs.bannerlordmodding.lt, [Armature/Skeleton](https://docs.bannerlordmodding.lt/3d/armature_skeleton/) page | [Drive](https://drive.google.com/file/d/1Pasf8ZmngJGP5eKlTIG_JS8LlFG7u42Q/view) | `9989bd8a349ed7d3fb67e7e316d1e6f0` |
+| [manBody_Bannerlord_original.obj](reference-meshes/manBody_Bannerlord_original.obj): default male body, 14,183 faces (Cinema 4D export) | Earendil, #bl-3d-art pin, 2020-04-07 | [Drive](https://drive.google.com/open?id=1B_-SrRyW4F6vY39mijgK4vx9-AgY6jCA) | `c39f2b661172f454c6f57f8a9928970a` |
+| [M&B2-FEMALE.obj](reference-meshes/M&B2-FEMALE.obj): female body, 11,832 faces (Blender 2.79 export) | TH3WICK3D1, #bl-3d-art pin, 2020-04-09 | [Drive](https://drive.google.com/open?id=13oq_ni-a2eXTBlLF-8I7tI7s8tyfPvfk) | `a15a3aab30fa8c189c080f267d7fbcab` |
+| Default male body, OBJ (Avelium) | quoted by Earendil, 2020-04-07 | [Drive](https://drive.google.com/open?id=1qWDJRntfn8gsQlCuCaN2-hJwi6doZkD7) | **dead link (404)**, not recovered |
 
-The wiki's [Armature/Skeleton](https://docs.bannerlordmodding.lt/3d/armature_skeleton/) page provides an FBX with the skeleton and male body. You can also export the native meshes yourself with [TpacTool](https://docs.bannerlordmodding.lt/resources/tpactool/).
+Notes:
+- For rigging, use the FBX. Follow the wiki Armature/Skeleton page: rename the armature to `human_skeleton_notused`, hide the body, and parent your mesh to the skeleton.
+- The OBJs are static scale and shape references with no skeleton. Their `.mtl` files were never shared, so they import without materials. Compare their orientation and scale with the FBX before you model around them. Avelium noted that one body OBJ came out rotated 180° compared with TpacTool exports.
+- You can export the native meshes yourself with [TpacTool](https://docs.bannerlordmodding.lt/resources/tpactool/).

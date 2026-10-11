@@ -182,7 +182,7 @@ re-export with the scale and forward/up axes adjusted and import again over the 
 
 ## Community resources
 
-The main written reference for Bannerlord 3D modding is the community wiki [docs.bannerlordmodding.lt](https://docs.bannerlordmodding.lt/) (maintained by Litauen). [community-pins/](community-pins/README.md) indexes the pinned guides and tools from the #bl-3d-art Discord channel, credits each author, and links to the matching wiki pages.
+The main written reference for Bannerlord 3D modding is the community wiki [docs.bannerlordmodding.lt](https://docs.bannerlordmodding.lt/) (maintained by Litauen). [community-pins/](community-pins/README.md) indexes the pinned guides and tools from the #bl-3d-art Discord channel, credits each author, and links to the matching wiki pages. It also mirrors the human skeleton FBX and the male/female body reference meshes.
 
 ## Known gaps
 

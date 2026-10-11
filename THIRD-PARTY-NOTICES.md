@@ -34,3 +34,5 @@ SOFTWARE.
 
 All meshes, textures, materials and scene data are © TaleWorlds Entertainment (Mount & Blade II: Bannerlord and the
 War Sails DLC). See `LICENSE.md`, section 1. No ownership is claimed by the maintainer of this package.
+
+The skeleton and body reference meshes in `community-pins/reference-meshes/` are likewise TaleWorlds content. They were extracted and first shared by the community members credited in `community-pins/README.md`.
