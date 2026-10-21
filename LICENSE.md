@@ -4,6 +4,10 @@ This package has three kinds of content with three different owners. Read all th
 
 ## 1. Game assets (meshes, textures, materials, scene data) — TaleWorlds Entertainment
 
+> **You must own Mount & Blade II: Bannerlord to use these files.** Everything here is TaleWorlds' game content, provided
+> only to help people make mods for the game. If you do not have a legitimate, current copy of Bannerlord (and the War Sails
+> DLC, for DLC content), do not download or use these files.
+
 Every mesh, texture, material definition, prefab arrangement and scene/terrain layout in the `.blend` files and in `deps\`
 is the intellectual property of **TaleWorlds Entertainment** and comes from *Mount & Blade II: Bannerlord* and its *War Sails*
 DLC. **The maintainer of this package claims no ownership of, and grants no rights to, any of that content.** It is

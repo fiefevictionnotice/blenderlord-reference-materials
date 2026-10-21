@@ -1,5 +1,9 @@
 # Bannerlord Reference (Blender)
 
+> **You must own Mount & Blade II: Bannerlord to use these files.** Everything here is TaleWorlds' game content, provided
+> only to help people make mods for the game. If you do not have a legitimate, current copy of Bannerlord (and the War Sails
+> DLC, for DLC content), do not download or use these files.
+
 Blender 4.4 reference files rebuilt from Mount & Blade II: Bannerlord's own scene and prefab data, for modders who want to
 modify, measure or block out Bannerlord-style architecture and scenes in Blender.
 
@@ -38,6 +42,29 @@ tree (blends at the top, textures under `deps\textures\`). Open the extracted `.
 Archive 01 works on its own (meshes, hierarchy and material names are all there); anything whose textures you have not
 downloaded just shows as flat colour. The same MD5 list is in `CHECKSUMS.md5` on the archive page.
 
+### Complete armor and weapons references
+
+Two more optional, self-contained downloads on the same [Internet Archive page](https://archive.org/details/bannerlord-reference-blender),
+each with its own textures (same `deps\textures\` layout, engine material names), for Blender 4.4 or newer:
+
+| Archive | Size | Contents | MD5 |
+|---|---|---|---|
+| `Bannerlord-Armor-Reference-Full-1.7z` | 1.7 GB | `Bannerlord-Armor-Reference-Full.blend` + part of its textures. **Required for the armor set.** | `5051f23800f3de8dada37250d667b71d` |
+| `Bannerlord-Armor-Reference-Full-2.7z` | 2.0 GB | armor textures, `Equipment\Shared` | `035134b2ea21d7f9f3971e4d12d1f6b7` |
+| `Bannerlord-Armor-Reference-Full-3.7z` | 1.6 GB | armor textures, Battania and Aserai | `f11dff361844cb01ceb12c268cb583d5` |
+| `Bannerlord-Armor-Reference-Full-4.7z` | 1.2 GB | armor textures, Sturgia and Empire | `8fdce4d20d49a74cc1c9dfd2bae80aff` |
+| `Bannerlord-Weapons-Reference-Full.7z` | 1.9 GB | `Bannerlord-Weapons-Reference-Full.blend` + all its textures | `61e40569ae7daddbe22a25dd998e75ba` |
+
+* **Armor (complete):** every armor mesh in the vanilla game, 1,433 meshes: 256 helmets, 241 body armors with all their
+  `_converted` / `_slim` variants (946 meshes), capes, gloves, boots and 32 horse harnesses, one grid per slot with a row
+  per culture, vertex groups kept so an Armature modifier re-rigs them; plus `human_skeleton`, the base bodies and horses.
+  Extract all four parts into one folder.
+* **Weapons (complete):** all 454 crafted weapons assembled from their pieces with the game's placement rule, the full
+  crafting piece library (757 blade, handle, guard and pommel meshes), and every shield, bow, crossbow, ammo and thrown weapon.
+
+Each archive has its own README (`README-Armor-Reference-Full.md`, `README-Weapons-Reference-Full.md`, also listed on the
+archive page) with the collection layout and custom properties.
+
 ### Starter download (GitHub mirror)
 
 A smaller sample is also on this repository's
@@ -49,8 +76,8 @@ as a backup for when the Internet Archive is unavailable and as a quick way to t
 | `Bannerlord-Reference-10-Armor-Reference.7z` | 1.1 GB | The Armor Reference, identical to archive 10 above. | `b3bf421fbe592acec8a767b530f32066` |
 | `Bannerlord-Reference-Starter-Buildings.7z` | 2.1 GB | `Bannerlord-Starter-Buildings.blend`: 12 example buildings (three each from Empire, Vlandia, Sturgia and Aserai) in a labelled grid, with their 195 textures. | `81c7d22995155e545d97040cbffeb00b` |
 
-Extract both into the same folder; shared textures are byte-identical. Open in Blender 4.4 or newer. The full set is only on
-the Internet Archive.
+Extract both into the same folder; shared textures are byte-identical. Open in Blender 4.4 or newer. Both files are on the
+Internet Archive page too; the full set and the complete armor and weapons references are only there.
 
 This repository holds the documentation, the license, the texture-downscale script, the one blend small enough to live here
 (`Bannerlord-Physics-Materials.blend`, 160 KB, no textures; see "Physics materials" below) and the polycount reference
