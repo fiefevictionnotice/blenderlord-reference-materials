@@ -38,6 +38,20 @@ tree (blends at the top, textures under `deps\textures\`). Open the extracted `.
 Archive 01 works on its own (meshes, hierarchy and material names are all there); anything whose textures you have not
 downloaded just shows as flat colour. The same MD5 list is in `CHECKSUMS.md5` on the archive page.
 
+### Starter download (GitHub mirror)
+
+A smaller sample is also on this repository's
+[Releases page](https://github.com/fiefevictionnotice/blenderlord-reference-materials/releases/tag/starter-2026-10-21),
+as a backup for when the Internet Archive is unavailable and as a quick way to try the files:
+
+| Archive | Size | Contents | MD5 |
+|---|---|---|---|
+| `Bannerlord-Reference-10-Armor-Reference.7z` | 1.1 GB | The Armor Reference, identical to archive 10 above. | `b3bf421fbe592acec8a767b530f32066` |
+| `Bannerlord-Reference-Starter-Buildings.7z` | 2.1 GB | `Bannerlord-Starter-Buildings.blend`: 12 example buildings (three each from Empire, Vlandia, Sturgia and Aserai) in a labelled grid, with their 195 textures. | `81c7d22995155e545d97040cbffeb00b` |
+
+Extract both into the same folder; shared textures are byte-identical. Open in Blender 4.4 or newer. The full set is only on
+the Internet Archive.
+
 This repository holds the documentation, the license, the texture-downscale script, the one blend small enough to live here
 (`Bannerlord-Physics-Materials.blend`, 160 KB, no textures; see "Physics materials" below) and the polycount reference
 (see "Polycount reference" below). Everything else is in the archive.
