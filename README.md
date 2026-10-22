@@ -65,6 +65,29 @@ each with its own textures (same `deps\textures\` layout, engine material names)
 Each archive has its own README (`README-Armor-Reference-Full.md`, `README-Weapons-Reference-Full.md`, also listed on the
 archive page) with the collection layout and custom properties.
 
+#### Which file has which armor
+
+| You want | Download | Open | Look in (Outliner) |
+|---|---|---|---|
+| A quick rigged example: three multiplayer sets (Empire, Vlandia, Sturgia) worn by male and female bodies, with and without gloves | archive 10, `Bannerlord-Reference-10-Armor-Reference.7z` | `Bannerlord-Armor-Reference.blend` | `Armor_Reference` |
+| Every helmet, hood, hat and scarf (256) | `Bannerlord-Armor-Reference-Full-1.7z` to `-4.7z` | `Bannerlord-Armor-Reference-Full.blend` (in part 1) | `AF_HeadArmor` |
+| Every body armor with its `_converted` / `_slim` variants (946 meshes) | same | same | `AF_BodyArmor` |
+| Capes, gloves, boots, horse harness | same | same | `AF_Cape`, `AF_HandArmor`, `AF_LegArmor`, `AF_HorseHarness` |
+| Skeleton, base male and female bodies, horses | same (also in archive 10) | same | `AF_Figures` |
+| Weapons, shields, bows, crossbows | `Bannerlord-Weapons-Reference-Full.7z` | `Bannerlord-Weapons-Reference-Full.blend` | `AW_Crafted`, `AW_Pieces`, `AW_Shields_Ranged` |
+
+The main set (archives 01 to 09) has no armor meshes. In the complete armor blend every slot has one sub-collection per
+culture (`AF_HeadArmor_aserai`, `AF_BodyArmor_empire`, ...), one row each with a culture label at the row's end. The file
+opens with only `AF_Figures` turned on: tick a collection's checkbox in the Outliner to show it, one slot at a time.
+
+![Bannerlord-Armor-Reference-Full.blend, collection AF_HeadArmor: helmets in one row per culture, item names on the labels](images/armor_full_helmets.png)
+
+*`AF_HeadArmor` in `Bannerlord-Armor-Reference-Full.blend`: helmets, one row per culture.*
+
+![Bannerlord-Armor-Reference-Full.blend, collection AF_BodyArmor: body armors on a grid, one row per culture](images/armor_full_body_armor.png)
+
+*`AF_BodyArmor` in `Bannerlord-Armor-Reference-Full.blend`: body armors with their variants, one row per culture.*
+
 ### Starter download (GitHub mirror)
 
 A smaller sample is also on this repository's
