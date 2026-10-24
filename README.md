@@ -88,6 +88,22 @@ opens with only `AF_Figures` turned on: tick a collection's checkbox in the Outl
 
 *`AF_BodyArmor` in `Bannerlord-Armor-Reference-Full.blend`: body armors with their variants, one row per culture.*
 
+### Example LODs and physics add-ons
+
+Three small optional add-ons, each showing every 10th item per category with **all of its LODs** and its **engine
+physics shapes** (wireframe over LOD0 and on its own), with the triangle count per LOD. Extract each one **into the same
+folder as the download it extends**: they reuse its textures. On the [Internet Archive page](https://archive.org/details/bannerlord-reference-blender)
+and on this repository's [releases page](https://github.com/fiefevictionnotice/blenderlord-reference-materials/releases/tag/lod-examples-2026-10-24).
+
+| Archive | Size | Contents | Extends | MD5 |
+|---|---|---|---|---|
+| `Bannerlord-Buildings-Example-LODs-Physics.7z` | 0.9 GB | 205 building prefabs from 54 categories, every LOD, all physics shapes placed as the prefab places them, plus the 27 textures the main set lacks | archives 01 to 09 | `a0b6556f2547de7eb203edfd45cf60a8` |
+| `Bannerlord-Armor-Example-LODs-Physics.7z` | 29 MB | 73 armor pieces and horse harnesses, every LOD (armor and harness have no physics shapes in the game) | complete armor | `8ab8fd2bdbd93b75a893f975ea4dc408` |
+| `Bannerlord-Weapons-Example-LODs-Physics.7z` | 15 MB | 68 weapons, shields and ranged items, every LOD, with their shared physics shapes | complete weapons | `22a3fb7e597d8ce75f1195f19fef0936` |
+
+Weapon physics shapes are the game's shared templates (`bo_sword_one_handed`, `bo_spear_b`, ...), stored at unit length,
+so they do not match each weapon's size. Each archive has its own README with the layout and custom properties.
+
 ### Starter download (GitHub mirror)
 
 A smaller sample is also on this repository's
