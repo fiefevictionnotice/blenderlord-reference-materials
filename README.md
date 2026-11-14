@@ -216,6 +216,9 @@ labels. Before exporting armor rigged to these skeletons, read the
 (skeleton named `human_skeleton_notused`, Skinning ticked, no leaf bones, at most 4 weights per vertex).
 `README-Armor-Reference.md` on the archive page and inside the archive has the details.
 
+**Renders:** [`reference/armor-renders/`](reference/armor-renders/) has front, right and rear renders of every helmet
+(256 items) on a clay mannequin, to browse before opening the blend.
+
 ## Physics materials
 
 Bannerlord picks the physics material of a collision mesh (`bo_<name>`) from the **name of the material** on it: a face with a
