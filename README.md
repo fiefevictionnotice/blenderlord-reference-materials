@@ -216,8 +216,9 @@ labels. Before exporting armor rigged to these skeletons, read the
 (skeleton named `human_skeleton_notused`, Skinning ticked, no leaf bones, at most 4 weights per vertex).
 `README-Armor-Reference.md` on the archive page and inside the archive has the details.
 
-**Renders:** [`reference/armor-renders/`](reference/armor-renders/) has front, right and rear renders of every helmet
-(256 items) on a clay mannequin, to browse before opening the blend.
+**Renders:** [`reference/armor-renders/`](reference/armor-renders/) has front, right and rear renders of every armor
+item on a clay mannequin, to browse before opening the blend: 256 helmets, 241 body armors, 35 gloves, 39 boots and 31
+horse harnesses (602 items).
 
 ## Physics materials
 
